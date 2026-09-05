@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="13" fill="#2a2724"/>
+  <g fill="#faf7f0" fill-rule="evenodd">
+    <!-- L 倾斜 -6.5° -->
+    <g transform="translate(11 17) rotate(-6.5 12 15)">
+      <path d="M0 3.5Q0 0 3.5 0L9.5 0Q13 0 13 3.5L13 19Q13 22.5 16.5 22.5L23 22.5Q26.5 22.5 26.5 26L26.5 28Q26.5 31.5 23 31.5L3.5 31.5Q0 31.5 0 28Z"/>
+    </g>
+    <!-- L 倾斜 +4.5° -->
+    <g transform="translate(29 20) rotate(4.5 12 15)">
+      <path d="M0 3.5Q0 0 3.5 0L9.5 0Q13 0 13 3.5L13 19Q13 22.5 16.5 22.5L23 22.5Q26.5 22.5 26.5 26L26.5 28Q26.5 31.5 23 31.5L3.5 31.5Q0 31.5 0 28Z"/>
+    </g>
+  </g>
+</svg>
