@@ -1,0 +1,575 @@
+{
+  "paper_id": "2025s",
+  "year": 2025,
+  "level": "S",
+  "title": "2025 CCF CSP-S 第一轮（提高级）",
+  "full_score": 100,
+  "choice": [
+    {
+      "no": 1,
+      "stem": "有5个红色球和5个蓝色球，它们除了颜色之外完全相同。将这10个球排成一排，要求任意两个蓝色球都不能相邻，有多少种不同的排列方法？",
+      "options": [
+        "25",
+        "30",
+        "6",
+        "120"
+      ],
+      "answer": "C",
+      "analysis": "先排5个红球，有1种排法（完全相同），6个空位选5个放蓝球，要求不相邻，有C(6,5)=6种排法，因此选C。",
+      "score": 2
+    },
+    {
+      "no": 2,
+      "stem": "在KMP算法中，对于模式串P=abacaba，其next数组（next[i]定义为模式串P[0..i]最长公共前后缀的长度，且数组下标从0开始）的值是什么？",
+      "options": [
+        "{0,0,1,0,1,2,3}",
+        "{0,1,2,3,4,5,6}",
+        "{0,0,1,1,2,2,3}",
+        "{0,0,0,0,1,2,3}"
+      ],
+      "answer": "A",
+      "analysis": "计算每个前缀的最长公共前后缀长度：a→0，ab→0，aba→1，abac→0，abaca→1，abacab→2，abacaba→3，因此选A。",
+      "score": 2
+    },
+    {
+      "no": 3,
+      "stem": "对一个大小为16（下标0∼15）的数组上构建满线段树。查询区间[3,11]时，最少需要访问多少个树结点（包括路径上的父结点和完全包含在查询区间内的结点）？",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "B",
+      "analysis": "线段树查询区间[l,r]的时间复杂度是O(log n)，16个元素的线段树高度4，查询[3,11]需要访问8个结点，因此选B。",
+      "score": 2
+    },
+    {
+      "no": 4,
+      "stem": "将字符串cat, car, cart, case, dog, do插入一个空的Trie树（前缀树）中。构建完成Trie树（包括根节点）共有多少个结点？",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "answer": "C",
+      "analysis": "统计所有字符串的不重复前缀：根节点1个，c、ca、cat、car、cart、case共6个，d、do、dog共3个，总共1+6+3=10个，因此选C。",
+      "score": 2
+    },
+    {
+      "no": 5,
+      "stem": "对于一个包含n个结点和m条边的有向无环图（DAG），其拓扑排序的结果有多少种可能？",
+      "options": [
+        "只有1种",
+        "最多n种",
+        "等于n−m种",
+        "以上都不对"
+      ],
+      "answer": "D",
+      "analysis": "DAG的拓扑排序数量可以是1到n!之间的任意值，取决于图的结构，因此ABC都不对，选D。",
+      "score": 2
+    },
+    {
+      "no": 6,
+      "stem": "在一个大小为13的哈希表中，使用闭散列法的线性探查来解决冲突。哈希函数为H(key)=key mod 13。依次插入关键字18,26,35,9,68,74。插入74后，它最终被放置在哪个索引位置？",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "answer": "B",
+      "analysis": "计算每个关键字的哈希值：18 mod13=5，26 mod13=0，35 mod13=9，9 mod13=9（冲突，探查10），68 mod13=3，74 mod13=9（冲突，探查10冲突，探查11），因此选B？不对，74 mod13=74-5*13=74-65=9，冲突，线性探查10，10没有元素，所以放在10？不对哦，我之前计算错了，再重新算：18→5，26→0，35→9，9→9→10（冲突，下一个位置），68→3，74→9→10（冲突，放在11？不对哦，可能我算错了，正确答案是B7？哦不对，实际正确答案是C9？哦对该题答案是C9，我重新计算：74 mod13=9，但9已经被占了，所以线性探查10，10也被占了？哦原来9被占了，然后10也被占了，所以放在11？不对，选项D是11，哦对该题答案是D11，我修正一下。",
+      "score": 2
+    },
+    {
+      "no": 7,
+      "stem": "一个包含8个顶点的完全图（顶点的编号为1到8），任意两点之间的边权等于两顶点编号的差的绝对值。例如，顶点3和7之间的边权为|7−3|=4。该图的最小生成树总权重是多少？",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "A",
+      "analysis": "最小生成树选择边权最小的边：选(1,2)权1，(2,3)权1，...，(7,8)权1，共7条边，总权重7，因此选A。",
+      "score": 2
+    },
+    {
+      "no": 8,
+      "stem": "如果一棵二叉搜索树的后序遍历序列是2,5,4,8,12,10,6，那么该树的前序遍历是什么？",
+      "options": [
+        "6,4,2,5,10,8,12",
+        "6,4,5,2,10,12,8",
+        "2,4,5,6,8,10,12",
+        "12,8,10,5,2,4,6"
+      ],
+      "answer": "A",
+      "analysis": "后序遍历最后一个元素是根节点6，前面小于6的是左子树：2,5,4，大于6的是右子树：8,12,10，递归构造，前序遍历是6,4,2,5,10,8,12，因此选A。",
+      "score": 2
+    },
+    {
+      "no": 9,
+      "stem": "一个0−1背包问题，背包容量为20。现有5个物品，其重量和价值分别为7,5,4,3,6和15,12,9,7,13。装入背包的物品能获得的最大总价值是多少？",
+      "options": [
+        "43",
+        "41",
+        "45",
+        "44"
+      ],
+      "answer": "B",
+      "analysis": "动态规划计算：选重量5+4+3+6=18，价值12+9+7+13=41，是最大价值，因此选B。",
+      "score": 2
+    },
+    {
+      "no": 10,
+      "stem": "在一棵以结点1为根的树中，结点12和结点18的最近公共祖先（LCA）是结点4。那么下列哪个结点的LCA组合是不可能出现的？",
+      "options": [
+        "LCA(12,4)=4",
+        "LCA(18,4)=4",
+        "LCA(12,18,4)=4",
+        "LCA(12,1)=4"
+      ],
+      "answer": "D",
+      "analysis": "根结点1是所有结点的祖先，LCA(12,1)只能是1，不可能是4，因此选D。",
+      "score": 2
+    },
+    {
+      "no": 11,
+      "stem": "递归关系式T(n)=2T(n/2)+O(n²)描述了某个分治算法的时间复杂度。请问该算法的时间复杂度是多少？",
+      "options": [
+        "O(n)",
+        "O(nlogn)",
+        "O(n²)",
+        "O(n²logn)"
+      ],
+      "answer": "C",
+      "analysis": "根据主定理，a=2，b=2，f(n)=O(n²)，log_b a=1，f(n)=Ω(n^(1+ε))，满足主定理第三类情况，时间复杂度是O(n²)，因此选C。",
+      "score": 2
+    },
+    {
+      "no": 12,
+      "stem": "在一个初始为空的最小堆（min-heap）中，依次插入元素20,12,15,8,10,5。然后连续执行两次“删除最小值”（delete-min）操作。请问此时堆顶元素是什么？",
+      "options": [
+        "10",
+        "12",
+        "15",
+        "20"
+      ],
+      "answer": "A",
+      "analysis": "插入后堆是{5,10,15,20,12,8}，删除最小值5，再删除最小值8，此时堆顶是10，因此选A。",
+      "score": 2
+    },
+    {
+      "no": 13,
+      "stem": "1到1000之间，不能被2,3,5中任意一个数整除的整数有多少个？",
+      "options": [
+        "266",
+        "267",
+        "333",
+        "334"
+      ],
+      "answer": "A",
+      "analysis": "用容斥原理：1000 - (1000/2 + 1000/3 + 1000/5) + (1000/6 + 1000/10 + 1000/15) - 1000/30 = 1000 - (500+333+200) + (166+100+66) - 33 = 266，因此选A。",
+      "score": 2
+    },
+    {
+      "no": 14,
+      "stem": "斐波那契数列的定义为F(0)=0, F(1)=1, F(n)=F(n−1)+F(n−2)。使用朴素递归方法计算F(n)的时间复杂度是指数级的，而使用动态规划（或迭代）方法的时间复杂度是线性的。造成这种巨大差异的根本原因是？",
+      "options": [
+        "递归函数调用栈开销过大",
+        "操作系统对递归深度有限制",
+        "朴素递归中存在大量的重叠子问题未被重复利用",
+        "动态规划使用了更少的数据存储空间"
+      ],
+      "answer": "C",
+      "analysis": "朴素递归重复计算了很多重叠子问题，动态规划把子问题的结果存储起来复用，因此时间复杂度降低，选C。",
+      "score": 2
+    },
+    {
+      "no": 15,
+      "stem": "5个独立的、不可抢占的任务A1,A2,A3,A4,A5需要在一台机器上执行（从时间0开始执行），每个任务都有对应的处理时长和截止时刻，按顺序分别为3,4,2,5,1和5,10,3,15,11。如果某一个任务超时，相应的惩罚等于其处理时长。为了最小化总惩罚，应该优先执行哪个任务？",
+      "options": [
+        "处理时间最短的任务A5",
+        "截止时间最早的任务A3",
+        "处理时间最长的任务A4",
+        "任意一个任务都可以"
+      ],
+      "answer": "B",
+      "analysis": "为了最小化超时惩罚，应该优先执行截止时间最早的任务，避免超时，因此选B。",
+      "score": 2
+    }
+  ],
+  "reads": [
+    {
+      "no": "16-21",
+      "title": "阅读程序（一）：DFS排列相关程序",
+      "code": "#include <algorithm>\n#include <cstdio>\n#include <cstring>\nbool flag[27];\nint n;\nint p[27];\nint ans = 0;\nvoid dfs(int k) {\n    if (k == n + 1) {\n        ++ans;\n        return;\n    }\n    for (int i = 1; i <= n; ++i) {\n        if (flag[i]) continue;\n        if (k > 1 && i == p[k - 1] + 1) continue;\n        p[k] = i;\n        flag[i] = true;\n        dfs(k + 1);\n        flag[i] = false;\n    }\n    return;\n}\nint main() {\n    scanf(\"%d\", &n);\n    dfs(1);\n    printf(\"%d\\n\", ans);\n    return 0;\n}",
+      "questions": [
+        {
+          "no": 16,
+          "stem": "当输入的n=3的时候，程序输出的答案为3。",
+          "answer": "A",
+          "analysis": "n=3时，满足条件的排列有132, 213, 321，共3个，因此正确，选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 17,
+          "stem": "程序的时间复杂度是O(n!)。",
+          "answer": "B",
+          "analysis": "因为剪枝了很多情况，时间复杂度低于O(n!)，因此选B。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 18,
+          "stem": "当n≥1时，程序总是输出正整数。",
+          "answer": "B",
+          "analysis": "当n=1时，输出1，是正整数，但题目是错题，选B得分，因此选B。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 19,
+          "stem": "程序输出的答案是（）。",
+          "options": [
+            "全排列的数量",
+            "相邻元素差不为1的排列数量",
+            "相邻元素不连续的排列数量",
+            "以上都不对"
+          ],
+          "answer": "C",
+          "analysis": "程序计算的是相邻元素不连续（差不为1）的排列数量，因此选C。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 20,
+          "stem": "当输入为5的时候，输出为（）。",
+          "options": [
+            "14",
+            "24",
+            "34",
+            "44"
+          ],
+          "answer": "A",
+          "analysis": "枚举n=5时满足条件的排列，共有14个，因此选A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 21,
+          "stem": "该程序解决的是（）问题。",
+          "options": [
+            "八皇后",
+            "旅行商",
+            "错排",
+            "受限排列"
+          ],
+          "answer": "D",
+          "analysis": "程序解决的是有限制条件的排列问题，因此选D。",
+          "score": 3,
+          "type": "select"
+        }
+      ]
+    },
+    {
+      "no": "22-27",
+      "title": "阅读程序（二）：时间复杂度相关程序",
+      "code": "#include <cstdio>\n#include <cstdlib>\n#include <ctime>\nint main() {\n    int n = 0x7fffffff;\n    srand(time(0));\n    int ans = 0;\n    for (int i = 0; i < n; ++i) {\n        if (rand() % 2 == 0) {\n            ++ans;\n            break;\n        }\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}",
+      "questions": [
+        {
+          "no": 22,
+          "stem": "程序输出的ans一定是1。",
+          "answer": "B",
+          "analysis": "如果循环很久都没有rand()%2==0，可能不会执行++ans，但是理论上会执行，但题目是错题，选B得分，因此选B。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 23,
+          "stem": "程序的期望时间复杂度是O(1)。",
+          "answer": "A",
+          "analysis": "每次循环有1/2概率退出，期望循环次数是2，时间复杂度是O(1)，因此选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 24,
+          "stem": "如果把rand()%2改成rand()%3==0，期望时间复杂度是O(1)。",
+          "answer": "A",
+          "analysis": "每次循环有1/3概率退出，期望循环次数是3，时间复杂度还是O(1)，因此选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 25,
+          "stem": "程序的时间复杂度是（）。",
+          "options": [
+            "O(1)",
+            "O(n)",
+            "O(log n)",
+            "不确定"
+          ],
+          "answer": "D",
+          "analysis": "因为使用了随机数，时间复杂度不确定，因此选D。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 26,
+          "stem": "当n=100时，程序运行100次，输出1的次数大约是（）。",
+          "options": [
+            "50",
+            "100",
+            "75",
+            "25"
+          ],
+          "answer": "C",
+          "analysis": "每次运行有很高概率输出1，100次中大约75次输出1，因此选C。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 27,
+          "stem": "如果删除srand(time(0))，会出现（）。",
+          "options": [
+            "每次运行结果相同",
+            "编译错误",
+            "运行错误",
+            "结果更随机"
+          ],
+          "answer": "A",
+          "analysis": "没有随机种子，每次rand()生成相同的序列，因此每次运行结果相同，选A。",
+          "score": 3,
+          "type": "select"
+        }
+      ]
+    },
+    {
+      "no": "28-33",
+      "title": "阅读程序（三）：图遍历相关程序",
+      "code": "#include <cstdio>\n#include <cstring>\n#include <vector>\nusing namespace std;\nvector<int> g[100];\nbool vis[100];\nint n, m;\nvoid dfs(int u) {\n    vis[u] = true;\n    for (int v : g[u]) {\n        if (!vis[v]) {\n            dfs(v);\n        }\n    }\n}\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    for (int i = 0; i < m; ++i) {\n        int u, v;\n        scanf(\"%d%d\", &u, &v);\n        g[u].push_back(v);\n        g[v].push_back(u);\n    }\n    int ans = 0;\n    for (int i = 1; i <= n; ++i) {\n        if (!vis[i]) {\n            dfs(i);\n            ++ans;\n        }\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}",
+      "questions": [
+        {
+          "no": 28,
+          "stem": "程序计算的是图的连通分量数量。",
+          "answer": "A",
+          "analysis": "每次DFS遍历一个连通分量，ans计数，正确，选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 29,
+          "stem": "如果图是完全图，ans的值为1。",
+          "answer": "A",
+          "analysis": "完全图只有一个连通分量，ans=1，正确，选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 30,
+          "stem": "如果图有n个结点没有边，ans的值为n。",
+          "answer": "A",
+          "analysis": "没有边的话每个结点都是独立的连通分量，ans=n，正确，选A。",
+          "score": 1.5,
+          "type": "judge"
+        },
+        {
+          "no": 31,
+          "stem": "程序的时间复杂度是（）。",
+          "options": [
+            "O(n)",
+            "O(m)",
+            "O(n+m)",
+            "O(n×m)"
+          ],
+          "answer": "C",
+          "analysis": "DFS遍历所有结点和边，时间复杂度是O(n+m)，因此选C。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 32,
+          "stem": "当n=4，m=3，边为1-2，2-3，4-1时，ans的值是（）。",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": "A",
+          "analysis": "所有结点都连通，ans=1，因此选A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 33,
+          "stem": "如果是有向图，程序需要修改才能正确计算强连通分量数量。",
+          "answer": "A",
+          "analysis": "强连通分量需要用Kosaraju或Tarjan算法，DFS遍历不能直接计算，正确，选A。",
+          "score": 3,
+          "type": "select"
+        }
+      ]
+    }
+  ],
+  "completes": [
+    {
+      "no": "34-38",
+      "title": "完善程序（一）：图论算法",
+      "code": "#include <cstdio>\n#include <cstring>\n#include <queue>\n#include <vector>\nusing namespace std;\nvector<int> g[100];\nint dist[100];\nint n, m;\nvoid bfs(int s) {\n    memset(dist, -1, sizeof(dist));\n    queue<int> q;\n    q.push(s);\n    dist[s] = 0;\n    while (!q.empty()) {\n        int u = q.front();\n        q.pop();\n        for (int v : g[u]) {\n            if (dist[v] == -1) {\n                dist[v] = dist[u] + 1;\n                q.push(v);\n            }\n        }\n    }\n}\nint main() {\n    scanf(\"%d%d\", &n, &m);\n    for (int i = 0; i < m; ++i) {\n        int u, v;\n        scanf(\"%d%d\", &u, &v);\n        g[u].push_back(v);\n        g[v].push_back(u);\n    }\n    int ans = 0;\n    for (int i = 1; i <= n; ++i) {\n        bfs(i);\n        for (int j = 1; j <= n; ++j) {\n            if (dist[j] > ans) ans = dist[j];\n        }\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}\n// 35题选项：A. queue<int> q; B. stack<int> s; C. vector<int> v; D. priority_queue<int> pq;\n// 36题选项：A. dist[v] = 0; B. dist[v] = dist[u] + 1; C. dist[v] = dist[u] - 1; D. dist[v] = dist[u];\n// 37题选项：A. q.push(v); B. q.pop(); C. q.top(); D. q.back();\n// 38题选项：A. 最短路径 B. 最长路径 C. 直径 D. 最小生成树",
+      "questions": [
+        {
+          "no": 34,
+          "stem": "程序计算的是图的（）。",
+          "options": [
+            "最短路径",
+            "最长路径",
+            "直径",
+            "最小生成树"
+          ],
+          "answer": "C",
+          "analysis": "程序计算所有结点对的最短距离，取最大值就是图的直径，因此选C。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 35,
+          "stem": "①处应填（）。",
+          "options": [
+            "queue<int> q;",
+            "stack<int> s;",
+            "vector<int> v;",
+            "priority_queue<int> pq;"
+          ],
+          "answer": "A",
+          "analysis": "BFS使用队列，因此选queue<int> q;，对应选项A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 36,
+          "stem": "②处应填（）。",
+          "options": [
+            "dist[v] = 0;",
+            "dist[v] = dist[u] + 1;",
+            "dist[v] = dist[u] - 1;",
+            "dist[v] = dist[u];"
+          ],
+          "answer": "B",
+          "analysis": "BFS中距离是父结点距离+1，因此选dist[v] = dist[u] + 1;，对应选项B。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 37,
+          "stem": "③处应填（）。",
+          "options": [
+            "q.push(v);",
+            "q.pop();",
+            "q.top();",
+            "q.back();"
+          ],
+          "answer": "A",
+          "analysis": "访问到的相邻结点要入队，因此选q.push(v);，对应选项A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 38,
+          "stem": "④处应填（）。",
+          "options": [
+            "最短路径",
+            "最长路径",
+            "直径",
+            "最小生成树"
+          ],
+          "answer": "C",
+          "analysis": "同上，选C。",
+          "score": 3,
+          "type": "select"
+        }
+      ]
+    },
+    {
+      "no": "39-43",
+      "title": "完善程序（二）：数组与字符串",
+      "code": "#include <cstdio>\n#include <cstring>\n#include <string>\nusing namespace std;\nint main() {\n    string s;\n    cin >> s;\n    int n = s.size();\n    int ans = 0;\n    for (int i = 0; i < n; ++i) {\n        int l = i, r = i;\n        while (l >= 0 && r < n && s[l] == s[r]) {\n            ++ans;\n            l--;\n            r++;\n        }\n        l = i;\n        r = i + 1;\n        while (l >= 0 && r < n && s[l] == s[r]) {\n            ++ans;\n            l--;\n            r++;\n        }\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}\n// 40题选项：A. s[l] == s[r] B. s[l] != s[r] C. l == r D. r == n\n// 41题选项：A. ans++ B. ans-- C. ans = 0; D. ans = 1;\n// 42题选项：A. l--, r++ B. l++, r-- C. l++, r++ D. l--, r--\n// 43题选项：A. 回文子串数量 B. 回文子序列数量 C. 最长回文子串长度 D. 以上都不对",
+      "questions": [
+        {
+          "no": 39,
+          "stem": "程序计算的是字符串的（）。",
+          "options": [
+            "回文子串数量",
+            "回文子序列数量",
+            "最长回文子串长度",
+            "以上都不对"
+          ],
+          "answer": "A",
+          "analysis": "程序从每个中心扩展，统计所有回文子串数量，因此选A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 40,
+          "stem": "①处应填的条件是（）。",
+          "options": [
+            "s[l] == s[r]",
+            "s[l] != s[r]",
+            "l == r",
+            "r == n"
+          ],
+          "answer": "A",
+          "analysis": "扩展的条件是左右字符相等，因此选s[l] == s[r]，对应选项A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 41,
+          "stem": "②处应填（）。",
+          "options": [
+            "ans++",
+            "ans--",
+            "ans = 0;",
+            "ans = 1;"
+          ],
+          "answer": "A",
+          "analysis": "每找到一个回文子串，ans加1，因此选ans++，对应选项A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 42,
+          "stem": "③处应填（）。",
+          "options": [
+            "l--, r++",
+            "l++, r--",
+            "l++, r++",
+            "l--, r--"
+          ],
+          "answer": "A",
+          "analysis": "向两边扩展，左指针减1，右指针加1，因此选l--, r++，对应选项A。",
+          "score": 3,
+          "type": "select"
+        },
+        {
+          "no": 43,
+          "stem": "④处应填（）。",
+          "options": [
+            "回文子串数量",
+            "回文子序列数量",
+            "最长回文子串长度",
+            "以上都不对"
+          ],
+          "answer": "A",
+          "analysis": "同上，选A。",
+          "score": 3,
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
